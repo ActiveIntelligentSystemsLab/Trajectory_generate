@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <param name="use_sim_time" value="true" />
+    <node pkg="rtabmap_create_data" name="generate_dataset" type="MapToImage_script.py" output="screen"/>
+    <rosparam command="load" file="$(find rtabmap_create_data)/config/greenhouse_config.yaml" />
+</launch>
